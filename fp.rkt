@@ -49,3 +49,15 @@
        )
 )
 
+
+;program to perform addition of elements inside list
+;we ignore non numeric values
+;we add up the values in list inside of list(nested lists)
+
+;define the function sum-up-numbers-general
+(DEFINE(sum-up-numbers-general L)
+
+
+
+)
+
