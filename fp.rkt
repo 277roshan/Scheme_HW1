@@ -60,7 +60,11 @@
            ;if list is null then just return 0 to be added to the sum 
            ((NULL? L)
                 0
-            ) 
+            )
+           ;if value we get from car is a list then we recurse on the inner list and also recurse on rest of the list
+           ((LIST? (CAR L))
+               (+ (sum-up-numbers-simple (CAR L)) (sum-up-numbers-simple (CDR L)))
+           )
        )
 
 
