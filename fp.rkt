@@ -45,11 +45,20 @@
            ;in other cases just add 0 and recurse on rest of the list
            (ELSE
                (+ 0 (sum-up-numbers-simple (CDR L)))
-           )
-
-         
+           )   
        )
-
-
-
 )
+
+;test the sum-up-numbers-simple function
+
+(sum-up-numbers-simple '())
+(sum-up-numbers-simple '(100 200))
+(sum-up-numbers-simple '(a b c))
+(sum-up-numbers-simple '(100 a))
+(sum-up-numbers-simple '(a 100))
+(sum-up-numbers-simple '(a 100 b 200 c 300 d))
+(sum-up-numbers-simple '(()))
+(sum-up-numbers-simple '((100)))
+(sum-up-numbers-simple '(100 (200)))
+(sum-up-numbers-simple '(a 100 b (200) c 300 d))
+(sum-up-numbers-simple '(a b 1 2 c 3 d))
