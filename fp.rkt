@@ -56,6 +56,12 @@
 
 ;define the function sum-up-numbers-general
 (DEFINE(sum-up-numbers-general L)
+       (COND
+           ;if list is null then just return 0 to be added to the sum 
+           ((NULL? L)
+                0
+            ) 
+       )
 
 
 
