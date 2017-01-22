@@ -2,7 +2,7 @@
 
 ;program to reverse given list
 
-;define the function to reverse the list named reverse_general
+;define the function to reverse the list named reverse-general
 ;parameter: L (a list)
 (DEFINE (reverse-general L)
          (COND
@@ -21,3 +21,13 @@
         )  
 )
 
+;program to perform addition of elements inside list
+;we ignore non numeric values
+;we ignore the list inside list
+
+;define the function sum-up-numbers-simple
+(DEFINE(sum-up-numbers-simple L)
+
+
+
+)
