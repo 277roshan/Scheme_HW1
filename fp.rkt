@@ -38,6 +38,11 @@
                (+ 0 (sum-up-numbers-simple (CDR L)))
            )
 
+           ;if value we get from car is a number then add that value and recurse on rest of the list
+           ((NUMBER? (CAR L))
+               (+ (CAR L) (sum-up-numbers-simple (CDR L)))
+           )
+
          
        )
 
