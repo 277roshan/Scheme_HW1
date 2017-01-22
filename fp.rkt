@@ -69,6 +69,10 @@
            ((NUMBER? (CAR L))
                (+ (CAR L) (sum-up-numbers-simple (CDR L)))
            )
+           ;in other cases just add 0 and recurse on rest of the list
+           (ELSE
+               (+ 0 (sum-up-numbers-simple (CDR L)))
+           )
        )
 
 
