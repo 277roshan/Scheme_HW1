@@ -33,6 +33,10 @@
            ((NULL? L)
                 0
             )
+           ;if value we get from car is a list then we just add 0 and recurse on rest of the list
+           ((LIST? (CAR L))
+               (+ 0 (sum-up-numbers-simple (CDR L)))
+           )
 
          
        )
