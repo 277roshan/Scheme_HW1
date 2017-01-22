@@ -63,19 +63,32 @@
             )
            ;if value we get from car is a list then we recurse on the inner list and also recurse on rest of the list
            ((LIST? (CAR L))
-               (+ (sum-up-numbers-simple (CAR L)) (sum-up-numbers-simple (CDR L)))
+               (+ (sum-up-numbers-general (CAR L)) (sum-up-numbers-general (CDR L)))
            )
            ;if value we get from car is a number then add that value and recurse on rest of the list
            ((NUMBER? (CAR L))
-               (+ (CAR L) (sum-up-numbers-simple (CDR L)))
+               (+ (CAR L) (sum-up-numbers-general (CDR L)))
            )
            ;in other cases just add 0 and recurse on rest of the list
            (ELSE
-               (+ 0 (sum-up-numbers-simple (CDR L)))
+               (+ 0 (sum-up-numbers-general (CDR L)))
            )
        )
-
-
-
 )
+
+;testing the sum-up-numbers-general
+
+(sum-up-numbers-general '(a b 1 (2 c (3)) d))
+(sum-up-numbers-general '())
+(sum-up-numbers-general '(100))
+(sum-up-numbers-general '(100 200))
+(sum-up-numbers-general '(a))
+(sum-up-numbers-general '(a 100 b 200 c 300 d))
+(sum-up-numbers-general '(()))
+(sum-up-numbers-general '((100)))
+(sum-up-numbers-general '(100 (200)))
+(sum-up-numbers-general '(a 100 b (200) c 300 d))
+(sum-up-numbers-general '(a 100 ((b ((200) c)) 300 d)))
+
+
 
