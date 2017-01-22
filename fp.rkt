@@ -21,22 +21,3 @@
         )  
 )
 
-
-;testing the cases
-(reverse-general '())
-(reverse-general '(a b c))
-(reverse-general '(a b ()))
-(reverse-general '((a b c)))
-(reverse-general '((a b c) (d e f)))
-(reverse-general '(a (b c) ((d e) f) g))
-(reverse-general '(1 (2 3) (4 (a (b (c d))))))
-
-
-;()
-;(c b a)
-;(() b a)
-;((c b a))
-;((f e d) (c b a))
-;(g (f (e d)) (c b) a)
-;(((((d c) b) a) 4) (3 2) 1)
-
