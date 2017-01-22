@@ -76,19 +76,6 @@
        )
 )
 
-;testing the sum-up-numbers-general
-
-(sum-up-numbers-general '(a b 1 (2 c (3)) d))
-(sum-up-numbers-general '())
-(sum-up-numbers-general '(100))
-(sum-up-numbers-general '(100 200))
-(sum-up-numbers-general '(a))
-(sum-up-numbers-general '(a 100 b 200 c 300 d))
-(sum-up-numbers-general '(()))
-(sum-up-numbers-general '((100)))
-(sum-up-numbers-general '(100 (200)))
-(sum-up-numbers-general '(a 100 b (200) c 300 d))
-(sum-up-numbers-general '(a 100 ((b ((200) c)) 300 d)))
 
 
 
