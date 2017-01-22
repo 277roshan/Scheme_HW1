@@ -10,5 +10,11 @@
             ((NULL? L)
                 L
             )
+            ;if the first value in the list is a list then apply reverse to that list as well
+            ((LIST? (CAR L))
+              
+
+                (append (reverse_general (CDR L)) (list (reverse_general (CAR L))))
+            )
         )  
 )
