@@ -28,6 +28,15 @@
 ;define the function sum-up-numbers-simple
 (DEFINE(sum-up-numbers-simple L)
 
+       (COND
+           ;if list is null then just return ) to be added to the sum 
+           ((NULL? L)
+                0
+            )
+
+         
+       )
+
 
 
 )
