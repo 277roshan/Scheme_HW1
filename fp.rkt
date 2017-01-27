@@ -79,8 +79,22 @@
 ;helper function find minimum in a list
 (DEFINE(minimum L)
        (COND
+           ;if the list is null just return False to indicate absence of minimum
            ((NULL? L)
                 #F
+            )
+
+           ;if CDR list is null then just return #F 
+           ((NULL? (CDR L))
+                (COND
+                    ((NUMBER? (CAR L))
+                
+                         (CAR L)
+                     )
+                    (ELSE
+                        #F
+                    )
+                ) 
             )
        )
 )
