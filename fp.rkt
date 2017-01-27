@@ -116,6 +116,16 @@
                )
 
            )
+
+           ;if value we get from car is a number then add that value and recurse on rest of the list
+           ((NUMBER? (CAR L))
+               (MIN (CAR L) (minimum (CDR L))) 
+           )
+           
+           ;in other cases find minimum of rest of the list
+           (ELSE
+               (minimum (CDR L))
+           )
        )
 )
 
