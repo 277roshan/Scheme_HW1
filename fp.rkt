@@ -1,4 +1,5 @@
-
+;author: Roshan Thapaliya
+;email: roshanthapalia@gmail.com
 
 ;program to reverse given list
 
@@ -49,7 +50,6 @@
        )
 )
 
-
 ;program to perform addition of elements inside list
 ;we ignore non numeric values
 ;we add up the values in list inside of list(nested lists)
@@ -76,6 +76,10 @@
        )
 )
 
+;helper function find minimum in a list
+(DEFINE(minimum L)
+       
+)
 
 
 
