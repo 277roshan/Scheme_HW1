@@ -96,6 +96,26 @@
                     )
                 ) 
             )
+
+           ;if the first element is number and the second is not a number but letter
+           ((AND (NUMBER? (CAR L)) (NOT(NUMBER? (CAR(CDR L)))))
+               
+               (COND
+                   ;check_until_number to see if there is a number afterwards
+                   ; not found then just return CAR L
+                   ((NOT (check_until_number (CDR L)))
+                       (CAR L)
+                       
+                   )
+                   ;in else case call min on car L and recursive call on rest of list
+                   (ELSE
+                        
+                        (MIN (CAR L) (minimum (CDR L))) 
+       
+                   )
+               )
+
+           )
        )
 )
 
