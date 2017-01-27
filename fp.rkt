@@ -78,7 +78,11 @@
 
 ;helper function find minimum in a list
 (DEFINE(minimum L)
-       
+       (COND
+           ((NULL? L)
+                #F
+            )
+       )
 )
 
 
