@@ -146,3 +146,26 @@
 
 )
 
+;if greater than least return x else return false
+(DEFINE (greater-than-least least x)
+     (COND
+          ((NUMBER? x)
+
+               (COND
+                   ((> x least)
+                       x
+                   )
+
+                   (ELSE
+                    #F
+                    )
+
+                )
+               
+           )
+          (ELSE
+               #F
+           )
+      )
+)
+
