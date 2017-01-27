@@ -120,4 +120,19 @@
 )
 
 
+;helper function to find until we find the first number in the list
+(DEFINE(check_until_number L)
+       (COND
+            ((NULL? L)
+               #F
+             )
+            ((NUMBER? (CAR L))
+               #T
+            )
+            (ELSE
+            (check_until_number(CDR L))
+            )
+        )
+
+)
 
