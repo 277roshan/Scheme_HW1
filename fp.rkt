@@ -159,13 +159,19 @@
                    (ELSE
                     #F
                     )
-
                 )
-               
            )
           (ELSE
                #F
            )
       )
 )
+
+;utilize greater-than-least to map required values of list
+(DEFINE (list-filter L least)
+  (map (lambda (e) (greater-than-least least e))
+          L)
+)
+
+
 
