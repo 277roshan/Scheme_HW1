@@ -174,4 +174,25 @@
 )
 
 
+;utilize greater-than-least to map required values of list
+(define (list-filter L least)
+  (map (lambda (e) (greater-than-least least e))
+          L)
+)
+
+;define the min-above-min function
+(DEFINE(min-above-min L1 L2)
+       (COND
+            ; if false just find minimum of L1
+            ((NOT(minimum L2))
+                 (minimum L1)
+            )
+            ;otherwise filter the list and find minimum of that
+            (ELSE
+                 (minimum (list-filter L1 (minimum L2)))
+             )
+
+        )    
+)
+
 
